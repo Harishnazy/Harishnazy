@@ -1,0 +1,44 @@
+name: Generate Snake
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      - uses: crazy-max/ghaction-github-pages@v3
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
+
+**Step 3 — Run it manually the first time**
+
+1. Go to your profile repo on GitHub
+2. Click **Actions** tab
+3. Click **"Generate Snake"** on the left
+4. Click **"Run workflow"** → **"Run workflow"** (green button)
+5. Wait ~30 seconds for it to finish ✅
+
+**Step 4 — Enable Actions permissions** (if it fails)
+
+Go to repo **Settings → Actions → General** → set to **"Allow all actions"** → Save
+
+---
+
+After the first run, the snake image will be live at:
+```
+https://raw.githubusercontent.com/Harishnazy/Harishnazy/output/github-contribution-grid-snake-dark.svg
