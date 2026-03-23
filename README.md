@@ -108,11 +108,13 @@ const harish = {
 
 ---
 
-## 🐍 Contribution Snake
+## 🐍 Watch My Contributions Come Alive
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/Harishnazy/Harishnazy/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" />
-</div>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Harishnazy/Harishnazy/output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Harishnazy/Harishnazy/output/github-contribution-grid-snake.svg">
+  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/Harishnazy/Harishnazy/output/github-contribution-grid-snake.svg">
+</picture>
 
 > ⚙️ To activate the snake: In your profile repo go to **Actions → enable "Generate Snake" workflow**. [Setup guide →](https://github.com/Platane/snk)
 
