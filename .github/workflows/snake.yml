@@ -1,5 +1,4 @@
 name: Generate Snake
-
 on:
   schedule:
     - cron: "0 0 * * *"
@@ -10,6 +9,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write        # 👈 add this block
     steps:
       - uses: actions/checkout@v3
       
